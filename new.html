@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Date? 🎥❤️</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/hand-drawn-red-thread-illustration_23-2150041357.jpg?semt=ais_hybrid'); /* Couple image URL */
+            background-size: 60%; /* Make the background image smaller */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            height: 100vh;
+            position: relative;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        #yesBtn {
+            background-color: #4caf50;
+            color: white;
+        }
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        #response {
+            font-size: 28px;
+            color: yellow;
+            margin-top: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Do you want to go on a movie date? 🎬❤️</h1>
+    <button class="button" id="yesBtn" onclick="showYesMessage()">No 😒</button>
+    <button class="button" id="noBtn" onmouseover="moveNoButton()">Yes ❤️</button>
+
+    <p id="response"></p>
+
+    <script>
+        function showYesMessage() {
+            document.getElementById('response').innerText = "Yay! won't go! 🎉🎬🍿";
+        }
+
+        function moveNoButton() {
+            const noBtn = document.getElementById('noBtn');
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 50);
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        }
+    </script>
+
+</body>
+</html>
